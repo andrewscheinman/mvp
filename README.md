@@ -1,2 +1,2 @@
 # README
-Run the 'Run FPO Search' notebook file
+Open and run the 'Run_FPO_Search' notebook file
