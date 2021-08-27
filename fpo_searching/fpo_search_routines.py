@@ -282,7 +282,8 @@ def search_fpo(search_string, list_sentinels=[]):
                                                                                    usapp="on", pct="off", stem="off")
 
     if num_hits > 0:
-        print('...', search_string, '...', num_hits, 'hits', '(MAXIMUM DISPLAYED IS "TOP" 250)')
+        print('...', search_string, '...', num_hits, 'hits')
+        print('(MAXIMUM HITS RETRIEVED FOR FURTHER PROCESSING AND DISPLAY IS "TOP" 250 HITS)')
 
         df = _format_hits_as_df(first_ipnum_title_abstract_score)
 
