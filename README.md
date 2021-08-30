@@ -5,12 +5,19 @@ I was trained as a scientist (from infancy -- or at least it feels that way) and
 
 So imagine you've developed a new imaging compound for MRI usage, and let's say it has some catchy abbreviation like 'cis-paradiamagnetic indole agent' or 'CIA' agent for short.  And let's also say that you have a published patent application on file for your new compound (so that it's searchable in the patent databases).  If you want to find 'similar technology', you'd expect that any 'good' search method you use **should pull up that published patent application in the set of search results**.  In other words, that published patent application is really a positive control, and **can be used to give you a handle on how 'good' a search is**.
 
-In practice searches are usually done using keywords, and since the unique agent here is a 'paraCEST' agent, you'd presumably search the patent databases of published and patented patent documents for that term, **and you'd expect that your published application comes up when you do so**.  If it doesn't you have to ask **why not**, is it because whoever wrote the patent application didn't use that term, which is either 1) understandable if you yourself hadn't been using that term when the patent application was written and filed; or, 2) likely **really bad** because you were using the term and whoever wrote the patent application document messed up and didn't include it.
+In practice searches are usually done using keywords, and since the unique agent here is a 'cis-paradiamagnetic indole agent' or 'CIA agent,' you'd presumably search the patent databases of published and patented patent documents for one or both of those terms.  **And you'd expect that your published application comes up when you do so**.  If it doesn't you have to ask **why not**, is it because whoever wrote the patent application didn't use those terms, which is either 1) understandable if you yourself hadn't been using themwhen the patent application was written and filed; or, 2) likely **really bad** because you were using the terms and whoever wrote the patent application document messed up and didn't include them.
 <br><br>
 
 ## 2. People Do Already Use 'Positive Controls' in Patent Searching, But Not Very Effectively
-Now every time anyone runs a patent search they presumably take at least a quick look at the results, and when they do so they probably note if one or more of those results is one of the 'patent documents' (i.e., 
+Now every time anyone runs a patent search they presumably take at least a quick look at the results, and when they do so they probably note if one or more of those results is one of the 'patent documents' (again for my purposes here, published and issued US patents) they already have identified as ones that **had better** come up in the search.  This is obviously just good practice, and it's easy to do when the search returns a small enough number of results that you can easily look through them.
 
+But the situation becomes very different when the search returns a large number of results, especially when there are multiple expected patent documents.  This is so because people become glassy-eyed when they're looking through lists of these documents; perhaps more to the point, search engines usually return on the top 10 or 20 results, often on separate webpages, and people generally don't click their way through a long multi-page result set.
 <br><br>
+
+## 3. The Software Here is a Stripped-Down Example of Making 'Positive Control' Patent Document Searching More Effective.
+In this repository I'm providing an example of how to run and display patent document searches in a way that ensures positive control searching is effectively used.  Specifically, I've written simple code that uses the FreePatentsOnline website (FPO)[http://freepatentsonline.com]
+
+
+
 1. Click on: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
 2. Then open and run the 'CLICKME_1st.ipynb' notebook file.
