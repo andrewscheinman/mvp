@@ -17,10 +17,20 @@ But the situation becomes very different when the search returns a large number 
 ## 3. The Software Here is a Stripped-Down Example of Making 'Positive Control' Patent Document Searching More Effective.
 In this repository I'm providing an example of how to run and display patent document searches in a way that ensures positive control searching is effectively used.  Specifically, I've written simple code that uses the FreePatentsOnline website [FPO]([http://freepatentsonline.com) search syntax (which I really like) but provides output which **specifically highlights 'positive control' IP documents returned**.  This does two things:
 
-1. It ensures that the searcher sees very clearly which positive controls come up in the search; and,
-2. It enforces the use by the searcher of this positive control methodology, i.e., it enforces a good search practice that provides feedback on whether or not the search was 'good.'
+1. It ensures that the searcher sees very clearly **which positive controls come up in the search**; and,
+2. It enforces the use by the searcher of this positive control methodology, i.e., it **enforces a better search practice that provides feedback on whether or not the search was 'good.'**
+<br><br>
 
+## 4. Some Points About This Software
+As I said, I'm using the FPO website for the actual searching, in order to not overload that site I've limited the number of search results returned to the 'top' 250 for any particular search, if there are at least that many results.  I do display that total number of hits that the search produced, but the software only shows up to the 'top' 250, where 'top' is based on a ranking system that FPO uses and that they don't discuss.
 
+What this means in practice is that a 'positive control' patent document **won't be found in the results of this software** if it's not in the 'top' 250 results as ranked by FPO.  If there are 1000 hits and one of these control documents is hit #451 in the ranking, it won't be scored as found.
 
-1. Click on: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
-2. Then open and run the 'CLICKME_1st.ipynb' notebook file.
+Obviously I could change this, but this software is only a proof-of-concept for a much larger software suite that I've written, and there are other improvements that I've made in that suite that are more signficant than this 'maximum returned' limit
+<br><br>
+
+## 5. To Run This Software
+I've provided an example 'Jupyter Notebook' file, 'CLICKME_1st.ipynb', which you can get up and running for free by:
+
+1. Clicking on the following link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
+2. Then opening and running (via the double arrow icon on the top menu) the 'CLICKME_1st.ipynb' notebook file.
