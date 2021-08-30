@@ -1,3 +1,8 @@
-# README
+# Patent Searching Using 'Positive Controls'
+Scientists are taught from infancy to run 'positive controls' in their experiments as a way of making sure that a non-result with a test substance isn't a non-result because the test itself isn't working.  If, for example, you want to run a test to detect covid in a blood sample, you need to make sure that a covid-positive blood sample control run through your test gives you a 'COVID DETECTED' result.
+
+I was trained as a scientist (from infancy) and then became one, after which I became a patent attorney, and I continue to apply the 'positive control' idea in the patenting work I do.  One area where the concept is **critically useful** is in patent searching, which is a perfect example of a situation where you'll almost always get results **regardless** of whether your search is meaningful, something that a 'positive control' for the search can help you overcome.
+
+
 1. Click on: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
 2. Then open and run the 'CLICKME_1st.ipynb' notebook file.
