@@ -5,7 +5,7 @@ I was trained as a scientist (from infancy -- or at least it feels that way) and
 
 So imagine you've developed a new imaging compound for MRI usage, and let's say it has some catchy abbreviation like 'cis-paradiamagnetic indole agent' or 'CIA' agent for short.  And let's also say that you have a published patent application on file for your new compound (so that it's searchable in the patent databases).  If you want to find 'similar technology', you'd expect that any 'good' search method you use **should pull up that published patent application in the set of search results**.  In other words, that published patent application is really a positive control, and **can be used to give you a handle on how 'good' a search is**.
 
-In practice searches are usually done using keywords, and since the unique agent here is a 'cis-paradiamagnetic indole agent' or 'CIA agent,' you'd presumably search the patent databases of published and patented patent documents for one or both of those terms.  **And you'd expect that your published application comes up when you do so**.  If it doesn't you have to ask **why not**, is it because whoever wrote the patent application didn't use those terms, which is either 1) understandable if you yourself hadn't been using themwhen the patent application was written and filed; or, 2) likely **really bad** because you were using the terms and whoever wrote the patent application document messed up and didn't include them.
+In practice searches are usually done using keywords, and since the unique agent here is a 'cis-paradiamagnetic indole agent' or 'CIA agent,' you'd presumably search the patent databases of published and patented patent documents for one or both of those terms.  **And you'd expect that your published application comes up when you do so**.  If it doesn't you have to ask **why not**, is it because whoever wrote the patent application didn't use those terms, which is either 1) understandable if you yourself hadn't been using them when the patent application was written and filed; or, 2) likely **really bad** because you were using the terms and whoever wrote the patent application document messed up and didn't include them.
 <br><br>
 
 ## 2. People Do Already Use 'Positive Controls' in Patent Searching, But Not Very Effectively
@@ -26,7 +26,7 @@ As I said, I'm using the FPO website for the actual searching, in order to not o
 
 What this means in practice is that a 'positive control' patent document **won't be found in the results of this software** if it's not in the 'top' 250 results as ranked by FPO.  If there are 1000 hits and one of these control documents is hit #451 in the ranking, it won't be scored as found.
 
-Obviously I could change this, but this software is only a proof-of-concept for a much larger software suite that I've written, and there are other improvements that I've made in that suite that are more signficant than this 'maximum returned' limit
+Obviously I could change this, but this software is only a proof-of-concept for a much larger software suite that I've written, and there are other improvements that I've made in that suite that are more signficant than this 'maximum returned' limit.  Contact me at andrewscheinman at google mail for more details.
 <br><br>
 
 ## 5. To Run This Software
