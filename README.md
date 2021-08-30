@@ -33,4 +33,4 @@ Obviously I could change this, but this software is only a proof-of-concept for 
 I've provided an example 'Jupyter Notebook' file, 'CLICKME_1st.ipynb', which you can get up and running for free in a browser window (nothing downloaded on your machine, in fact you could run this on a tablet or smartphone) by:
 
 1. Clicking on the following link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
-2. Then opening and running (via the double arrow icon on the top menu) the 'CLICKME_1st.ipynb' notebook file.
+2. Then open and run (via the double arrow icon on the top menu) the 'CLICKME_1st.ipynb' notebook file.
