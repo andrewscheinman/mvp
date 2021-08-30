@@ -14,7 +14,7 @@ Now every time anyone runs a patent search they presumably take at least a quick
 But the situation becomes very different when the search returns a large number of results, especially when there are multiple expected patent documents.  This is so because people become glassy-eyed when they're looking through lists of these documents; perhaps more to the point, search engines usually return on the top 10 or 20 results, often on separate webpages, and people generally don't click their way through a long multi-page result set.
 <br><br>
 
-## 3. The Software Here is a Stripped-Down Example of Making 'Positive Control' Patent Document Searching More Effective.
+## 3. The Software Here is a Stripped-Down Example of Making 'Positive Control' Patent Document Searching More Effective
 In this repository I'm providing an example of how to run and display patent document searches in a way that ensures positive control searching is effectively used.  Specifically, I've written simple code that uses the FreePatentsOnline website [FPO]([http://freepatentsonline.com) search syntax (which I really like) but provides output which **specifically highlights 'positive control' IP documents returned**.  This does two things:
 
 1. It ensures that the searcher sees very clearly **which positive controls come up in the search**; and,
