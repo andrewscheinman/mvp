@@ -1,2 +1,2 @@
 # README
-Open and run the 'Run_FPO_Search' notebook file
+Open and run the 'CLICKME_1st.ipynb' notebook file
