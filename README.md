@@ -21,7 +21,9 @@ In this repository I'm providing an example of how to run and display patent doc
 2. It enforces the use by the searcher of this positive control methodology, i.e., it **enforces a better search practice that provides feedback on whether or not the search was 'good.'**  Otherwise, you're never sure what your 'results' are really telling you.
 <br><br>
 
-## 4. <HTML><span style="color:red">Search 'Hygiene'</span></HTML> 
+## 4. Enforcing Searching Best Practices
+
+<HTML><span style="color:red">Search 'Hygiene'</span></HTML> 
 
 
 ## 5. Some Points About This Software
