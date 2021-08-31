@@ -22,8 +22,10 @@ In this repository I'm providing an example of how to run and display patent doc
 <br><br>
 
 ## 4. Enforcing Searching Best Practices
+I want to spend a minute to emphasize that second point above -- how positive controls enforce searching best practices.  I've spent a couple of decades (at least) searching IP documents and seeing the searches of others, and **over and over** I've seen what happens when someone falls into the trap of searching, getting some set of hits, and then running off and searching again without bothering to think about what the first results even meant.
 
-<span style="color:red">cardinals</span>
+This is what the 'positive control' methodology targets, it forces you to stop and think about whether your 'results' mean anything, and breaks the viscious cycle of excessive searching that easy (online) searching enables.
+<br><br>
 
 ## 5. Some Points About This Software
 As I said, I'm using the FPO website for the actual searching, in order to not overload that site I've limited the number of search results returned to the 'top' 250 for any particular search, if there are at least that many results.  I do display that total number of hits that the search produced, but the software only shows up to the 'top' 250, where 'top' is based on a ranking system that FPO uses and that they don't discuss.
