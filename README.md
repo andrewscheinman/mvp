@@ -23,8 +23,7 @@ In this repository I'm providing an example of how to run and display patent doc
 
 ## 4. Enforcing Searching Best Practices
 
-<HTML><span style="color:red">Search 'Hygiene'</span></HTML> 
-
+<span style="color:red">cardinals</span>
 
 ## 5. Some Points About This Software
 As I said, I'm using the FPO website for the actual searching, in order to not overload that site I've limited the number of search results returned to the 'top' 250 for any particular search, if there are at least that many results.  I do display that total number of hits that the search produced, but the software only shows up to the 'top' 250, where 'top' is based on a ranking system that FPO uses and that they don't discuss.
