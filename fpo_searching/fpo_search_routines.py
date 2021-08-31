@@ -297,9 +297,17 @@ def search_fpo(search_string, list_sentinels=[],print_output='yes'):
 
         df_out = _check_sentinels(df_combined, list_sentinels)
         df_links = _util_add_links(df_out, patent_df_column='number')
+        
         if print_output=='yes':
-            render(df_links.drop(columns=['number']))
-        else:
-            return df_out, df_links
+            if len(df_links)>0:
+                render(df_links.drop(columns=['number']))
+            else:
+                print('no hits')
+        else:   # if don't print output:
+            if len(df_links)>0:
+                return df_out, df_links
+            else:
+                print('no hits')
+                return df_out, df_links
     else:
         print('...', search_string, '... no hits found')
