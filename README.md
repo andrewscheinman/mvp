@@ -18,10 +18,13 @@ But the situation quickly breaks down when the search returns a large number of 
 In this repository I'm providing an example of how to run and display patent document searches in a way that ensures positive control searching is effectively used.  Specifically, I've written simple code that uses the FreePatentsOnline website [FPO]([http://freepatentsonline.com) search syntax (which I really like) but provides output which **specifically highlights 'positive control' IP documents returned**.  This does two things:
 
 1. It ensures that the searcher sees very clearly **which positive controls come up in the search**; and,
-2. It enforces the use by the searcher of this positive control methodology, i.e., it **enforces a better search practice that provides feedback on whether or not the search was 'good.'**  Otherwise, you're never sure what your 'results' are really telling you. <span style="color:blue">some *This is Blue italic.* text</span>
+2. It enforces the use by the searcher of this positive control methodology, i.e., it **enforces a better search practice that provides feedback on whether or not the search was 'good.'**  Otherwise, you're never sure what your 'results' are really telling you.
 <br><br>
 
-## 4. Some Points About This Software
+## 4. <span style="color:red">Search 'Hygiene'</span> 
+
+
+## 5. Some Points About This Software
 As I said, I'm using the FPO website for the actual searching, in order to not overload that site I've limited the number of search results returned to the 'top' 250 for any particular search, if there are at least that many results.  I do display that total number of hits that the search produced, but the software only shows up to the 'top' 250, where 'top' is based on a ranking system that FPO uses and that they don't discuss.
 
 What this means in practice is that a 'positive control' patent document **won't be found in the results of this software** if it's not in the 'top' 250 results as ranked by FPO.  If there are 1000 hits and one of these control documents is hit #451 in the ranking, it won't be scored as found.
