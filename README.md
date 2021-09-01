@@ -40,5 +40,5 @@ I've provided an example 'Jupyter Notebook' file, 'CLICKME_1st.ipynb', which you
 
 1. Clicking on the following link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/test/HEAD)
 2. Then open and run (via the double arrow icon on the top menu) the 'CLICKME_1st.ipynb' notebook file.  The double arrow is:
-3. ![Untitled](https://user-images.githubusercontent.com/12629853/131710520-ec3d2406-a641-4337-9156-1a6a757e866d.png)
+![Untitled](https://user-images.githubusercontent.com/12629853/131710520-ec3d2406-a641-4337-9156-1a6a757e866d.png)
 
