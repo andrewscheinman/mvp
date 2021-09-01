@@ -274,7 +274,7 @@ def _check_sentinels(df, list_sentinels):
                 #display(HTML('<!DOCTYPE html><html><head><style>.redtext {color: red;}</style></head><body><h1 class="redtext">This heading will be red</h1><p>This paragraph will be normal.</p><p class="redtext">This paragraph will be red</p></body></html>'))
                 
                 #df['title'].iloc[result_number - 1] = '<div class="alert-success">' + df['title'].iloc[result_number - 1] + '</div>'
-                df['title'].iloc[result_number - 1] = '<!DOCTYPE html><html><head><style>.greenbackground {background-color: green;}</style></head><div class="greenbackground">' + df['title'].iloc[result_number - 1] + '</div>'
+                df['title'].iloc[result_number - 1] = '<!DOCTYPE html><html><head><style>.greenbackground {background-color: lightgreen;}</style></head><div class="greenbackground">' + df['title'].iloc[result_number - 1] + '</div>'
             else:
                 print(s, 'NOT hit')
     return df
