@@ -1,6 +1,7 @@
-import urllib.request, urllib.parse, urllib.error, urllib3, re
+import urllib.request, urllib.parse, urllib.error, urllib3, re, time
 import pandas as pd
 from IPython.display import display, HTML, Image
+import textwrap
 
 pd.set_option('display.max_colwidth', None)
 
@@ -263,55 +264,117 @@ def _format_hits_as_df(list_of_hits):
     return df
 
 
-def _check_sentinels(df, list_sentinels):
+def _check_sentinels(df, list_sentinels,print_output='yes'):
+    """[summary]
+
+    Args:
+        df ([type]): [description]
+        list_sentinels ([type]): [description]
+
+    Returns:
+        [type]: [description]
+    """
+    
+    list_sentinel_results_pos = []
+    list_sentinel_results_num = []
+    
     if len(list_sentinels) > 0:
         for s in list_sentinels:
             df_result = df[df['number'] == s]
             if len(df_result) > 0:
                 result_number = df_result.index.tolist()[0]
-                print(s, 'hit as result number:', result_number)
+                if print_output=='yes':
+                    print(s, 'hit as result number:', result_number)
                 
                 #display(HTML('<!DOCTYPE html><html><head><style>.redtext {color: red;}</style></head><body><h1 class="redtext">This heading will be red</h1><p>This paragraph will be normal.</p><p class="redtext">This paragraph will be red</p></body></html>'))
                 
                 #df['title'].iloc[result_number - 1] = '<div class="alert-success">' + df['title'].iloc[result_number - 1] + '</div>'
                 df['title'].iloc[result_number - 1] = '<!DOCTYPE html><html><head><style>.greenbackground {background-color: lightgreen;}</style></head><div class="greenbackground">' + df['title'].iloc[result_number - 1] + '</div>'
             else:
-                print(s, 'NOT hit')
-    return df
+                if print_output=='yes':
+                    print(s, 'NOT hit')
+                result_number = -1
+                
+            list_sentinel_results_pos.append(result_number)
+            if result_number!=-1:
+                list_sentinel_results_num.append("'" + s[-3:])
+            else:
+                list_sentinel_results_num.append(0)
+                   
+    return df, list_sentinel_results_num
 
 
 def search_fpo(search_string, list_sentinels=[],print_output='yes'):
+    """[summary]
+
+    Args:
+        search_string ([type]): [description]
+        list_sentinels (list, optional): [description]. Defaults to [].
+        print_output (str, optional): [description]. Defaults to 'yes'.
+
+    Returns:
+        [type]: [description]
+    """
+    
+    df_blank = pd.DataFrame()
     num_hits, num_pages, first_ipnum_title_abstract_score = _get_first_search_page(search_string, uspat="on",
                                                                                    usapp="on", pct="off", stem="off")
 
     if num_hits > 0:
-        print('...', search_string, '...', num_hits, 'hits')
-        print('(MAXIMUM HITS RETRIEVED FOR FURTHER PROCESSING AND DISPLAY IS "TOP" 250 HITS)')
+        if print_output=='yes':
+            print('...', search_string, '...', num_hits, 'hits')
+            print('(MAXIMUM HITS RETRIEVED FOR FURTHER PROCESSING AND DISPLAY IS "TOP" 250 HITS)')
 
+        # get first page of hits
         df = _format_hits_as_df(first_ipnum_title_abstract_score)
 
         remaining_ipnum_title_abstract_score = _get_remaining_search_pages(search_string, 5, uspat="on", usapp="on",
                                                                            pct="off", stem="off")
+        
+        # get remaining pages of hits (to 250)
         df2 = _format_hits_as_df(remaining_ipnum_title_abstract_score)
 
+        # combine to get a single dataframe
         df_combined = df.append(df2)
         df_combined.reset_index(inplace=True, drop=True)
         df_combined.index += 1
 
-        df_out = _check_sentinels(df_combined, list_sentinels)
+        if print_output=='no':
+            df_out, list_sentinel_results = _check_sentinels(df_combined, list_sentinels,'no')    
+        else:
+            df_out, list_sentinel_results = _check_sentinels(df_combined, list_sentinels)
         df_links = _util_add_links(df_out, patent_df_column='number')
         
         if print_output=='yes':
-            if len(df)>0:
-                render(df_links.drop(columns=['number']))
-            else:
-                print('No hits ... Nothing to Print')
-        else:   # if don't print output:
-            if len(df)>0:
-                return df_out, df_links
-            else:
-                print('No hits ... Empty Dataframes Returned')
-                df_blank = pd.DataFrame()
-                return df_blank, df_blank
+            render(df_links.drop(columns=['number']))
+            
+        # if don't print output:        
+        else:
+            return df_out, df_links, num_hits, list_sentinel_results
+        
+    # If no hits:    
     else:
-        print('GENERIC MESSAGE ...', search_string, '... no hits found')
+        if print_output=='yes':
+            print('...', search_string, '... no hits found')
+        else:
+            return df_blank, df_blank, num_hits, []
+
+
+def search_fpo_multiples(search_strings, list_controls):
+    #search_strings = ['metastable vanadium', 'metastable v2o5', '"metastable v2o5"~5', 'alcm/"metastable v2o5"~5']
+
+    list_num_hits = []
+    list_of_list_sentinel_results = []
+    for search_string in search_strings:
+        df, df_links, num_hits, list_sentinel_results = search_fpo(search_string,list_controls,'no')
+        time.sleep(2)
+        list_num_hits.append(num_hits)
+        list_of_list_sentinel_results.append(list_sentinel_results)
+        
+    df = pd.DataFrame()
+    df['Search String'] = search_strings
+    df['Total Hits'] = list_num_hits
+    df['Control(s) Hit'] = list_of_list_sentinel_results
+    df_output = df.T
+    df_output.columns = ['Search '+str(value) for value in list((range(1,len(search_strings)+1)))]
+    return df_output
