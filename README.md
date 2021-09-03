@@ -30,7 +30,7 @@ This is what the 'positive control' methodology targets, it forces you to stop a
 ## 5. Some Points About This Software
 As I said, I'm using the FPO website for the actual searching, in order to not overload that site I've limited the number of search results returned to the 'top' 250 for any particular search, if there are at least that many results.  I do display that total number of hits that the search produced, but the software only shows up to the 'top' 250, where 'top' is based on a ranking system that FPO uses and that they don't discuss.
 
-What this means in practice is that a 'positive control' patent document **won't be found in the results of this software if it's not in the 'top' 250 results as ranked by FPO**.  If there are 1000 hits and one of these control documents is hit #451 in the ranking, it won't be scored as found.
+What this means in practice is that a 'positive control' patent document **won't be found in the results of this software if it's not in the 'top' 250 results as ranked by FPO**.  If there are 1000 hits and one of these control documents is hit #451 in the ranking, it won't be scored as found in the result set.  There are other ways to do things (contact me about my proprietary software), but I've decided this is a good first step for investigating the methodology.
 
 Obviously I could change this, but this software is only a proof-of-concept for a much larger software suite that I've written, and there are other improvements that I've made in that suite that are more signficant than this 'maximum returned' limit.  Contact me at andrewscheinman at google mail for more details.
 <br><br>
