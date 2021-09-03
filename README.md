@@ -15,7 +15,7 @@ But the situation quickly breaks down when the search returns a large number of 
 <br><br>
 
 ## 3. The Software Here is a Stripped-Down Example of Making 'Positive Control' Patent Document Searching More Effective
-In this repository I'm providing an example of how to run and display patent document searches **in a way that ensures positive control searching is effectively used**.  Specifically, I've written simple code that uses the FreePatentsOnline website [FPO]([http://freepatentsonline.com) search syntax (which I really like) but provides output which **specifically highlights 'positive control' IP documents returned**.  This does two things:
+In this repository I'm providing an example of how to run and display patent document searches **in a way that ensures positive control searching is effectively used**.  Specifically, I've written simple code that uses the FreePatentsOnline website [FPO]([http://freepatentsonline.com) search syntax (which I really like) and provides output which **specifically highlights 'positive control' IP documents returned**.  This does two things:
 
 1. It ensures that the searcher sees very clearly **which positive controls come up in the search**; and,
 2. It enforces the use by the searcher of this positive control methodology, i.e., it **enforces a better search practice that provides feedback on whether or not the search was 'good.'**  Otherwise, you're never sure what your 'results' are really telling you.
