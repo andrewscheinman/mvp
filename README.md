@@ -22,7 +22,7 @@ In this repository I'm providing an example of how to run and display patent doc
 <br><br>
 
 ## 4. Enforcing Searching Best Practices
-I want to spend a minute to emphasize that second point above -- how positive controls enforce searching best practices.  I've spent a couple of decades (at least) searching IP documents and seeing the searches of others, and **over and over** I've seen what happens when someone falls into the trap of searching, getting some set of hits, and then running off and searching again without bothering to think about what the first results even meant.
+I want to spend a minute to emphasize that second point above -- how positive controls enforce searching best practices.  I've spent a couple of decades (at least) searching IP documents and seeing the searches of others, and **over and over** I've seen what happens when someone falls into the trap of searching, getting some set of hits, and then running off and searching again without bothering to think about what the first results even meant and how those first results point (or don't point) in a direction for the next set of searches.
 
 This is what the 'positive control' methodology targets, it forces you to stop and think about whether your 'results' mean anything, and breaks the vicious cycle of rabbit-hole excessive searching that easy (online) searching enables.  If you're forced to start by contemplating what defines a 'good' search, **and you're given a tool for doing that validation**, you're much more likely to results that mean something.
 <br><br>
