@@ -35,10 +35,10 @@ What this means in practice is that a 'positive control' patent document **won't
 Obviously I could change this, but this software is only a proof-of-concept for a much larger software suite that I've written, and there are other improvements that I've made in that suite that are more signficant than this 'maximum returned' limit.  Contact me at ```andrewscheinman at google mail``` for more details.
 <br><br>
 
-## 5. To Run This Software
+## 5. To Run This Software (Click on -> [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/mvp/HEAD))
 I've provided an example 'Jupyter Notebook' file, 'CLICKME_1st.ipynb', which you can get up and running for free in a browser window (nothing downloaded on your machine, in fact you could run this on a tablet or smartphone) by:
 
-1. Clicking on the following link: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/mvp/HEAD)
+1. **Clicking on the following link ->** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/andrewscheinman/mvp/HEAD)
 2. Then open and run (via the double arrow icon on the top menu) the 'CLICKME_1st.ipynb' notebook file.  The double arrow is:<br>
 ![Untitled](https://user-images.githubusercontent.com/12629853/131710520-ec3d2406-a641-4337-9156-1a6a757e866d.png)
 
